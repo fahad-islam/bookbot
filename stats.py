@@ -1,14 +1,12 @@
-path_to_file = "./books/frankenstein.txt"
-
 def get_book_text(filepath):
     with open(filepath) as f:
         return f.read()
 
-def get_num_words():
+def get_num_words(path_to_file):
     book_text = get_book_text(path_to_file)
     return len(book_text.split())
 
-def get_num_characters():
+def get_num_characters(path_to_file):
     book_text_character = list(get_book_text(path_to_file).lower())
     book_characters_dict = {}
 
